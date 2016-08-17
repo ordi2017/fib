@@ -1,7 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>fib</groupId>
-  <artifactId>fib-core</artifactId>
+  <groupId>fib-core</groupId>
+  <artifactId>fib</artifactId>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   
   <dependencies> 
@@ -202,7 +203,7 @@
   </dependencies>
   
   <build>
-    <finalName>erp</finalName>
+    <finalName>fib</finalName>
     
     <plugins>
         <plugin>

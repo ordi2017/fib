@@ -17,11 +17,11 @@ public class WebHookController {
 	private Log logger = LogFactory.getLog(this.getClass());
 	
 	@RequestMapping(value="/callback",method=RequestMethod.GET)
-	public void validFb(HttpServletRequest r,HttpServletResponse re){
+	public String validFb(HttpServletRequest r,HttpServletResponse re){
 		String token=(String)r.getAttribute("hub.challenge");
 	
-		logger.debug("hub challenge : "+token );
-	
+		logger.debug("hub challenge : "+token);
+		return token;
 		
 	}
 	
