@@ -15,7 +15,7 @@
 
 		<context:component-scan base-package="org.fib"></context:component-scan>
 
-
+	<mvc:annotation-driven /> 
 	
 
 
