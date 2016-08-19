@@ -1,5 +1,7 @@
 package org.fib.controllers;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 
@@ -36,10 +40,17 @@ public class WebHookController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<Void> receive(@RequestBody Payload o){
-		
-		System.out.println(o.getEntry().get(0).getId());
-		System.out.println(o.toString());
+	public ResponseEntity<Void> receive(@RequestBody String o){
+		ObjectMapper mapper = new ObjectMapper();
+		Payload p = null;
+		try {
+			p = mapper.readValue(o, Payload.class);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		System.out.println(o);
+		System.out.println(p.getEntry().get(1).getTime());
 		
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
