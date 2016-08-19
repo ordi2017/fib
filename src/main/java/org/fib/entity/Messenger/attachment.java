@@ -1,6 +1,6 @@
 package org.fib.entity.Messenger;
 
-public class Attachment {
+public class attachment {
 
 	private String type;
 	private String payload;

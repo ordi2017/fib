@@ -1,6 +1,6 @@
 package org.fib.entity.Messenger;
 
-public class Recipent {
+public class recipent {
 
 		private String id;
 

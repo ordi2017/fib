@@ -2,16 +2,16 @@ package org.fib.entity.Messenger;
 
 import java.util.List;
 
-public class Entry {
+public class entry {
 
 	private String id;
 	private int time;
-	private List<Messaging> messaging;
+	private List<messaging> messaging;
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
-		this.id = id;
+		this.id = id; 
 	}
 	public int getTime() {
 		return time;
@@ -19,10 +19,10 @@ public class Entry {
 	public void setTime(int time) {
 		this.time = time;
 	}
-	public List<Messaging> getMessaging() {
+	public List<messaging> getMessaging() {
 		return messaging;
 	}
-	public void setMessaging(List<Messaging> messaging) {
+	public void setMessaging(List<messaging> messaging) {
 		this.messaging = messaging;
 	}
 	

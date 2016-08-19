@@ -1,21 +1,21 @@
 package org.fib.entity.Messenger;
 
-public class Messaging {
+public class messaging {
 
-	private Sender sender;
-	private Recipent recipent;
+	private sender sender;
+	private recipent recipent;
 	private int timestamp;
-	private Message message;
-	public Sender getSender() {
+	private message message;
+	public sender getSender() {
 		return sender;
 	}
-	public void setSender(Sender sender) {
+	public void setSender(sender sender) {
 		this.sender = sender;
 	}
-	public Recipent getRecipent() {
+	public recipent getRecipent() {
 		return recipent;
 	}
-	public void setRecipent(Recipent recipent) {
+	public void setRecipent(recipent recipent) {
 		this.recipent = recipent;
 	}
 	public int getTimestamp() {
@@ -24,10 +24,10 @@ public class Messaging {
 	public void setTimestamp(int timestamp) {
 		this.timestamp = timestamp;
 	}
-	public Message getMessage() {
+	public message getMessage() {
 		return message;
 	}
-	public void setMessage(Message message) {
+	public void setMessage(message message) {
 		this.message = message;
 	}
 }

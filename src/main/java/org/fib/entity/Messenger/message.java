@@ -2,12 +2,12 @@ package org.fib.entity.Messenger;
 
 import java.util.List;
 
-public class Message {
+public class message {
 
 	private String mid;
 	private int seq;
 	private String text;
-	private List<Attachment> attachment;
+	private List<attachment> attachment;
 	
 	public String getMid() {
 		return mid;
@@ -27,10 +27,10 @@ public class Message {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public List<Attachment> getAttachment() {
+	public List<attachment> getAttachment() {
 		return attachment;
 	}
-	public void setAttachment(List<Attachment> attachment) {
+	public void setAttachment(List<attachment> attachment) {
 		this.attachment = attachment;
 	}
 	

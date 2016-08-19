@@ -1,6 +1,6 @@
 package org.fib.entity.Messenger;
 
-public class Sender {
+public class sender {
 	
 	private String id;
 
