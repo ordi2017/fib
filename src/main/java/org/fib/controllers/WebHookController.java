@@ -50,7 +50,12 @@ public class WebHookController {
 			e.printStackTrace();
 		}
 		System.out.println(o);
-		System.out.println(p.getEntry().get(1).getTime());
+		System.out.println(p);
+		if(p != null){
+			System.out.println(p);
+			System.out.println(p.getEntry().get(1).getTime());
+		}
+		
 		
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
