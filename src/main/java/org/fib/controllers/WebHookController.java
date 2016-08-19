@@ -3,9 +3,12 @@ package org.fib.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.fib.entity.Messenger.Payload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,11 +36,12 @@ public class WebHookController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public void receive(@RequestBody Object o){
+	public ResponseEntity<Void> receive(@RequestBody Payload o){
 		
-		System.out.println(o);
+		System.out.println(o.getEntry().get(0).getId());
 		System.out.println(o.toString());
 		
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
 }
