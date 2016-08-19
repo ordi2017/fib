@@ -5,7 +5,7 @@ import java.util.List;
 public class entry {
 
 	private String id;
-	private int time;
+	private long time;
 	private List<messaging> messaging;
 	public String getId() {
 		return id;
@@ -13,10 +13,10 @@ public class entry {
 	public void setId(String id) {
 		this.id = id; 
 	}
-	public int getTime() {
+	public long getTime() {
 		return time;
 	}
-	public void setTime(int time) {
+	public void setTime(long time) {
 		this.time = time;
 	}
 	public List<messaging> getMessaging() {

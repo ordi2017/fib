@@ -4,7 +4,7 @@ public class messaging {
 
 	private sender sender;
 	private recipent recipent;
-	private int timestamp;
+	private long timestamp;
 	private message message;
 	public sender getSender() {
 		return sender;
@@ -18,10 +18,10 @@ public class messaging {
 	public void setRecipent(recipent recipent) {
 		this.recipent = recipent;
 	}
-	public int getTimestamp() {
+	public long getTimestamp() {
 		return timestamp;
 	}
-	public void setTimestamp(int timestamp) {
+	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 	}
 	public message getMessage() {
